@@ -2,7 +2,7 @@
 
 dir=$(pwd)
 parentdir="$(dirname "$(pwd)")"
-for model_name in $1 
+for model_name in $2 
     do
 if [ $model_name = "transformer" ]; then 
         profile_dir="examples/transformer_proc/transformer_big_float32_hs_384"
