@@ -6,9 +6,9 @@ from subprocess import Popen
 RunConfig = namedtuple('RunConfig', ['model_name', 'step_size_sec', 'strategy', 'weights', 'num_iters', 'single'])
 configs = [
     #          model_name       , step_size_sec , strategy      , weights   , num_iters , single
-    RunConfig( 'resnet_v1_50'   , 1e-6          , "128:8:8192"  , 250e6     , 8192      , 39321 ),
-    RunConfig( 'transformer'    , 1e-6          , "128:8:1024"  , 700e6     , 16384     , 11264 ),
-    RunConfig( 'gpt2_355M'      , 1e-4          , "128:8:1024"  , 68e8      , 2403e3    , 2284  ),
+    RunConfig( 'resnet_v1_50'   , 1e-6          , "128:8:8192"  , 125e6     , 8192      , 30000 ),
+    RunConfig( 'transformer'    , 1e-6          , "128:8:1024"  , 600e6     , 15672     , 11264 ),
+    RunConfig( 'gpt2_355M'      , 1e-4          , "128:8:1024"  , 65e8      , 2403e3    , 2234  ),
 ]
 
 def run_experiments():
