@@ -96,7 +96,7 @@ def filter_ops(graph_def):
         'ReadVariableOp',
         'NoOp', 'Identity',
     ]
-    print('We are keeping:', sorted(special_ops))
+    print('We are keeping: 1000', sorted(special_ops))
     for name in types_map:
         if types_map[name] in special_ops:
             print(name)
@@ -319,9 +319,9 @@ if __name__ == '__main__':
         if g_var in var_ops:
             matched.add(g_var)
            
-    print('found:', matched)
-    print('var_ops - matched:', var_ops - matched)
-    print('all_g_vars - matched:', all_g_vars - matched)
+    print('found: 0', matched)
+    print('var_ops - matched: 5', var_ops - matched)
+    print('all_g_vars - matched:56', all_g_vars - matched)
     assert( len(matched) == len(var_ops) )
 
     read_varsize_map = {}
