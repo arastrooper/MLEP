@@ -157,7 +157,7 @@ int main( int argc, char **argv ) {
   graph.from_graph_profile( input_profile, cnfg.step_size_sec, 10 );
 
   /* get a summary of the graph at an example batch size */
-  graph.set_global_batchsize( 64 );
+  graph.set_global_batchsize( 32 );
   graph.summary( );
 
   /* read the number of training iterations required
@@ -190,7 +190,7 @@ int main( int argc, char **argv ) {
   tm_estimator.bind_to_sessions( &session, 1 );
   tm_estimator.log( );
   bool done = false;
-  for ( int it = 0; it < 1000000; it ++ ) {
+  for ( int it = 0; it < 100000; it ++ ) {
     session.proceed( done ).ok( );
     if ( done )
       break;
