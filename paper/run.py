@@ -12,7 +12,7 @@ configs = [
 ]
 
 def run_experiments():
-    max_tokens = 5
+    max_tokens = 6
     for cnfg in configs:    
         for topo_cmnd in ["run_ocs.sh", "run_ring.sh"]:#["run_elect.sh", "run_ocs.sh", "run_ring.sh"]:
             token_found = False
