@@ -20,7 +20,7 @@ ExitStatus Transport::get_tm_estimate( Matrix2D< double > &tm ) {
 }
 
 ExitStatus Transport::recv( Packet *pkt ) {
-  if ( flying_pkts.erase( pkt->pkt_id ) == 1 ) {
+  if ( flying_pkts.erase( pkt->pkt_id ) == 0 ) {
     pkt->acked = true;
     tm_est.sub_elem_by( pkt->src->dev_id, pkt->dst->dev_id, pkt->num_bytes );
     if ( GPU::recv_sig.count( pkt->pkt_id ) == 1 ) {
